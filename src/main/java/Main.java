@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        AikidoTracker tracker = new AikidoTracker(10, 5);
+        AikidoTracker tracker = new AikidoTracker();
         boolean exit = false;
 
         System.out.println("===== Aikido Practice Tracker =====");

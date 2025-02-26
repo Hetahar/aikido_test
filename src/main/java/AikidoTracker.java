@@ -6,24 +6,8 @@ public class AikidoTracker {
     private int duration = 0;
     private int days = 0;
 
-    public AikidoTracker(int amount, int days) {
+    public AikidoTracker() {
         this.amount = amount;
-        this.days = days;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public int getTime() {
-        return days;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public void setTime(int days) {
         this.days = days;
     }
 
@@ -37,6 +21,18 @@ public class AikidoTracker {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public int getDays() {
+        return days;
+    }
+
+    public void clearAmount() {
+        amount = 0;
     }
 
     public int seeDuration() {
@@ -53,6 +49,7 @@ public class AikidoTracker {
     public void addTrainingSession(int amount, int duration) {
         addAmount(amount);
         setDuration(duration);
+        addDays(1);
         System.out.println("Training session added: " + amount + " session in " + duration + " minutes.");
     }
 
